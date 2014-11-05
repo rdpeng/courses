@@ -102,8 +102,6 @@ Similarly, subsetting a single column or a single row will give you a vector, no
 ## Subsetting Lists
 
 ```r
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼6/14
-Subsetting Lists
 > x <- list(foo = 1:4, bar = 0.6)
 > x[1]
 $foo
