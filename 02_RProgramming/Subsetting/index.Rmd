@@ -204,7 +204,7 @@ What if there are multiple things and you want to take the subset with no missin
 
 ```r
 > x <- c(1, 2, NA, 4, NA, 5)
-> y <- c("a", "b", NA, "d", NA, "f")
+> y <- c("a", "b", NA, "d", "e", "f")
 > good <- complete.cases(x, y)
 > good
 [1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE
