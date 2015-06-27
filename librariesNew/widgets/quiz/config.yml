@@ -1,3 +1,0 @@
-quiz:
-  css: css/demo.css
-  js: [js/jquery.quiz.js, js/mustache.min.js, js/quiz-app.js]
