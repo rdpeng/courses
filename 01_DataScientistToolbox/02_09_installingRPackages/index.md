@@ -53,7 +53,7 @@ head(rownames(a), 3)  ## Show the names of the first few packages
 
 
 
-- There are approximately 5600 packages on CRAN covering a wide range of topics
+- There are approximately 7100 packages on CRAN covering a wide range of topics
 
 - A list of some topics is available through the [Task
   Views](http://cran.r-project.org/web/views/) link, which groups
@@ -69,15 +69,15 @@ head(rownames(a), 3)  ## Show the names of the first few packages
 - To install a single package, pass the name of the package to the
   `install.packages()` function as the first argument
 
-- The following the code installs the **slidify** package from CRAN
+- The following the code installs the **ggplot2** package from CRAN
 
 
 ```r
-install.packages("slidify")
+install.packages("ggplot2")
 ```
 
 
-- This command downloads the **slidify** package from CRAN and
+- This command downloads the **ggplot2** package from CRAN and
   installs it on your computer
 
 - Any packages on which this package depends will also be downloaded
@@ -94,7 +94,7 @@ install.packages("slidify")
 
 
 ```r
-install.packages(c("slidify", "ggplot2", "devtools"))
+install.packages(c("ggplot2", "swirl", "devtools"))
 ```
 
 
