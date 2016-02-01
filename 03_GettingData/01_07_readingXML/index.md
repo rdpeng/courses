@@ -18,7 +18,6 @@ mode        : selfcontained # {standalone, draft}
 
 
 
-
 ## XML
 
 * Extensible markup language
@@ -85,7 +84,6 @@ names(rootNode)
 ```
 
 
-
 ---
 
 ## Directly access parts of the XML document
@@ -114,7 +112,6 @@ rootNode[[1]][[1]]
 
 
 
-
 ---
 
 ## Programatically extract parts of the file
@@ -136,7 +133,6 @@ xmlSApply(rootNode,xmlValue)
                                                                                                                     food 
                         "Homestyle Breakfast$6.95Two eggs, bacon or sausage, toast, and our ever-popular hash browns950" 
 ```
-
 
 
 ---
@@ -175,7 +171,6 @@ xpathSApply(rootNode,"//price",xmlValue)
 
 
 
-
 ---
 
 ## Another example
@@ -209,8 +204,7 @@ scores
 ```
 
 ```
- [1] "49-27"    "14-6"     "30-9"     "23-20"    "26-23"    "19-17"    "19-16"    "24-18"   
- [9] "20-17 OT" "23-20 OT" "19-3"     "22-20"    "29-26"    "18-16"    "41-7"     "34-17"   
+list()
 ```
 
 ```r
@@ -218,16 +212,13 @@ teams
 ```
 
 ```
- [1] "Denver"      "Cleveland"   "Houston"     "Buffalo"     "Miami"       "Green Bay"  
- [7] "Pittsburgh"  "Cleveland"   "Cincinnati"  "Chicago"     "New York"    "Pittsburgh" 
-[13] "Minnesota"   "Detroit"     "New England" "Cincinnati" 
+[1] "Baltimore RavensRavens" "Baltimore RavensRavens"
 ```
-
 
 ---
 
 ## Notes and further resources
 
-* Official XML tutorials [short](http://www.omegahat.org/RSXML/shortIntro.pdf), [long](http://www.omegahat.org/RSXML/Tour.pdf)
+* Official XML tutorials [short](https://web.archive.org/web/20140906181450/http://www.omegahat.org/RSXML/shortIntro.pdf), [long](https://web.archive.org/web/20141113153333/http://www.omegahat.org/RSXML/Tour.pdf)
 * [An outstanding guide to the XML package](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
 
