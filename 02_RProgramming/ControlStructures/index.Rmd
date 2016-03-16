@@ -243,4 +243,4 @@ Summary
 
 - Infinite loops should generally be avoided, even if they are theoretically correct.
 
-- Control structures mentiond here are primarily useful for writing programs; for command-line interactive work, the *apply functions are more useful.
+- Control structures mentioned here are primarily useful for writing programs; for command-line interactive work, the *apply functions are more useful.
