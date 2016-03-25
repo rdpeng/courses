@@ -18,5 +18,5 @@ Materials are under development and subject to change.
 
 ### License
 
-These course materials are available under the Creative Commons Attribution NonCommercial ShareAlike (CC-NC-SA) license (http://www.tldrlegal.com/l/CC-NC-SA). 
+These course materials are available under the Creative Commons Attribution NonCommercial ShareAlike (CC-NC-SA) license (https://tldrlegal.com/license/creative-commons-attribution-noncommercial-sharealike-(cc-nc-sa)). 
 
