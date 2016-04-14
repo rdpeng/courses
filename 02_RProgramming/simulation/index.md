@@ -206,7 +206,7 @@ The `sample` function draws randomly from a specified set of (scalar) objects al
 > sample(letters, 5)
 [1] "q" "b" "e" "x" "p"
 > sample(1:10)  ## permutation
- [1] 4 710 6 9 2 8 3 1 5 
+ [1] 4 7 10 6 9 2 8 3 1 5 
 > sample(1:10)
  [1]  2  3  4  1  9  5 10  8  6  7
 > sample(1:10, replace = TRUE)  ## Sample w/replacement
