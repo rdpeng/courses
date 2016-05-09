@@ -16,6 +16,7 @@ mode        : selfcontained # {standalone, draft}
 ---
 ```{r setup, cache = FALSE, echo = FALSE, message = FALSE, warning = FALSE, tidy = FALSE}
 # make this an external chunk that can be included in any file
+library(knitr)
 options(width = 100)
 opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'fig/')
 
@@ -127,6 +128,7 @@ in carats (standard measure of diamond mass, 0.2 $g$). To get the data use `libr
 
 Plotting the fitted regression line and data
 ```
+library(UsingR)
 data(diamond)
 plot(diamond$carat, diamond$price,  
      xlab = "Mass (carats)", 
@@ -139,6 +141,7 @@ abline(lm(price ~ carat, data = diamond), lwd = 2)
 ---
 ## The plot
 ```{r, echo = FALSE, fig.height=5,fig.width=5}
+library(UsingR)
 data(diamond)
 plot(diamond$carat, diamond$price,  
      xlab = "Mass (carats)", 
