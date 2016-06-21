@@ -139,13 +139,16 @@ abline(lm(price ~ carat, data = diamond), lwd = 2)
 ---
 ## The plot
 ```{r, echo = FALSE, fig.height=5,fig.width=5}
+library(UsingR)
 data(diamond)
-plot(diamond$carat, diamond$price,  
-     xlab = "Mass (carats)", 
-     ylab = "Price (SIN $)", 
-     bg = "lightblue", 
-     col = "black", cex = 1.1, pch = 21,frame = FALSE)
-abline(lm(price ~ carat, data = diamond), lwd = 2)
+library(ggplot2)
+g = ggplot(diamond, aes(x = carat, y = price),)
+g = g + xlab("Mass (carats)")
+g = g + ylab("Price (SIN $)")
+g = g + geom_point(size = 6, colour = "black", alpha=0.2)
+g = g + geom_point(size = 4, colour = "blue", alpha=0.2)
+g = g + geom_smooth(method = "lm", colour="black")
+g
 ```
 
 ---
