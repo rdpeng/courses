@@ -145,6 +145,7 @@ table(iris$Species)
 ## Create training and test sets
 
 ```{r trainingTest, dependson="iris",cache=TRUE}
+library(caret)
 inTrain <- createDataPartition(y=iris$Species,
                               p=0.7, list=FALSE)
 training <- iris[inTrain,]
@@ -167,7 +168,6 @@ qplot(Petal.Width,Sepal.Width,colour=Species,data=training)
 ## Iris petal widths/sepal width
 
 ```{r createTree, dependson="trainingTest", cache=TRUE}
-library(caret)
 modFit <- train(Species ~ .,method="rpart",data=training)
 print(modFit$finalModel)
 ```
