@@ -1,0 +1,61 @@
+---
+title: "Machine Learning Project"
+author: "Michael Simpson"
+date: "February 9, 2015"
+output: html_document
+---
+
+
+### Load the data sets
+```{r}
+library(caret)
+library(ggplot2)
+#download data files
+download.file("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv", dest="pml-train.csv", method="curl")
+download.file("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv", dest="pml-test.csv", method="curl")
+train<- read.csv("pml-train.csv")
+test<- read.csv("pml-test.csv")
+```
+
+Perform some peliminary analysis on the train dataset
+```{r}
+
+nzv<- nearZeroVar(train, saveMetrics=T)
+nzv
+
+train2<- train[,nzv$nzv==F]
+train3<- train2[, -1]
+train4<- train3[,colSums(is.na(train3)) == 0] 
+
+inTrain = createDataPartition(y=train4$classe, p=0.8, list=F)
+myTrain = train4[inTrain,]
+myTest = train4[-inTrain,]
+qplot(user_name, color=classe, data=train2, geom="density")
+
+M<- abs(cor(train2[,6:99]))
+diag(M)<-0
+which(M> 0.99, arr.ind=T)
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+trainFit<- train(classe ~. , data=myTrain, method="rf", prox=TRUE)
+trainFit2<- train(classe ~ ., data=myTrain, method="rpart", tuneLength = 30)
+trainFit3<- randomForest(classe ~. , data=myTrain)
+
+print(trainFit2$finalModel)
+pred2<- predict(trainFit2, myTest)
+summary(pred2)
+confusionMatrix(pred2, myTest$classe)
+myTest$classe
+pred2
+
+pred3<- predict(trainFit3, myTest)
+confusionMatrix(pred3, myTest$classe)
+summary(pred3)
+table(pred3, myTest$classe)
+
+```
